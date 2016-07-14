@@ -36,14 +36,14 @@ body {
 .joinForm {
   background: #EFE9F4;
   color: #5863F8;
-  transition: 1s  ease-in; }
+  transition: 1s ease-in; }
   .joinForm:hover {
     background: #e3d8ec; }
 
 .show-form {
   height: 10em;
   padding: 1em;
-  transition: 1s  ease-out; }
+  transition: 1s ease-out; }
 
 .nav {
   background: #4B93C1;
@@ -58,7 +58,7 @@ body {
     font-size: 2em;
     list-style-type: none;
     flex: calc(100/3);
-    padding-top: .5em; }
+    padding-top: 0.5em; }
     .nav li:hover {
       background: #71aace;
       color: #EFE9F4; }
@@ -90,8 +90,7 @@ body {
   width: 100vw;
   height: 12vh;
   padding: 1em;
-  margin: 0;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
   outline: none;
   border: none;
   border-radius: 3px;
@@ -102,5 +101,22 @@ body {
   #submitBtn:hover {
     background: #e3d8ec;
     color: #171D1C; }
+
+.side-blog-list ul {
+  margin: 0;
+  padding: 0;
+  width: 33vw;
+  height: 100vh;
+  text-align: center;
+  border-right: 2px solid #5863F8; }
+  .side-blog-list ul li {
+    list-style-type: none;
+    border-bottom: 2px solid #5863F8;
+    padding: 2em; }
+    .side-blog-list ul li:hover {
+      background: #e3d8ec; }
+    .side-blog-list ul li h2, .side-blog-list ul li h3 {
+      margin: 0;
+      padding: 0; }
 
 /*# sourceMappingURL=main.css.map */
