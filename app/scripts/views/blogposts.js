@@ -16,7 +16,6 @@ import renderBlogpostForm from './postBlogForm';
 
 //import collections from here to get the whole thing to be displayed!
 function renderBlogposts() {
-    console.log('you\'re on the Blogposts page!');
 
     let $sideBlogList = $(`
     <div class="side-blog-list">
@@ -30,14 +29,27 @@ function renderBlogposts() {
           <li>
             <h2>${model.get('username')}</h4>
             <h3>${model.get('title')}</h3>
+            <p>${model.get('body')}</p>
           </li>
         `);
         $sideBlogList.find('ul').append($liContainer);
     }
+
+
     blogCollection.forEach(addBlogToList);
     blogCollection.on('add', addBlogToList);
-
     blogCollection.fetch();
+
+    let $sideBlog = $(`
+      <ul id="single-blog">
+        <li>
+
+        <li>
+      </ul>
+      `);
+
+
+
 
   return $sideBlogList;
 }

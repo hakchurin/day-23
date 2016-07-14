@@ -3,6 +3,7 @@ import Backbone from 'backbone';
 
 import router from '../router';
 import Member from '../models/member';
+import Blogpost from '../models/blogpost';
 import user from '../models/username';
 
 function renderBlogpostForm() {
