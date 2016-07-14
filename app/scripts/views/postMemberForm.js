@@ -27,7 +27,7 @@ function renderMemberForm() {
         address: $('#address').val(),
         phone: $('#phone').val()
     });
-    console.log(member);
+    console.log(member, '===member');
 
     member.save(null, {
         success: function(response) {

@@ -2,27 +2,41 @@ import $ from 'jquery';
 import Backbone from 'backbone';
 
 import $login from './views/login';
-import $nav from './views/nav';
+import renderNav from './views/nav';
 import renderMemberForm from './views/postMemberForm';
+import renderBlogposts from './views/blogposts';
+import renderBlogpostForm from './views/postBlogForm';
 
 const Router = Backbone.Router.extend({
   routes: {
     login: 'loginFunction',
     join: 'joinFunction',
-    blogposts: 'blogpostsFunction',
-    'blogposts/new' : 'newBlogpostFunction',
-    'blogposts/:id' : 'blogpostFunction'
+    read: 'blogpostsFunction',
+    write : 'newBlogpostFunction'
+    // 'blogposts/:id' : 'blogpostFunction'
   },
   loginFunction(){
     $('.appContainer').empty().append($login);
   },
   joinFunction(){
     let $memberForm = renderMemberForm();
-    $('.appContainer').empty().append($nav).append($memberForm);
+    let $navBar = renderNav();
+    $('.appContainer').empty().append($navBar).append($memberForm);
   },
-  blogpostsFunction(){},
-  newBlogpostFunction(){},
-  blogpostFunction(){}
+  blogpostsFunction(){
+    let $blogpostPage = renderBlogposts();
+    let $navBar = renderNav();
+    $('.appContainer').empty().append($navBar).append($blogpostPage);
+  },
+  newBlogpostFunction(){
+    // console.log();
+    let $newBlogpost = renderBlogpostForm();
+    let $navBar = renderNav();
+    $('.appContainer').empty().append($navBar).append($newBlogpost);
+  },
+  // blogpostFunction(){
+  //
+  // }
 });
 
 const router = new Router();

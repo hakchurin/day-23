@@ -1,10 +1,12 @@
 // import $ from 'jquery';
 import Backbone from 'backbone';
 import moment from 'moment';
+
 import user from './username';
 
 const Member = Backbone.Model.extend({
-  urlRoot: 'https://tiny-za-server.herokuapp.com/collections/day23_B-Log_sriester',
+  urlRoot: 'https://tiny-za-server.herokuapp.com/collections/day23_B-Log_sriester-members',
+  idAttribute: '_id',
   defaults: {
     username: user.username,
     joinedOn: moment().format('MMMM Do YYYY'),
