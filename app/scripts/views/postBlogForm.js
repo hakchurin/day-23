@@ -11,7 +11,7 @@ function renderBlogpostForm() {
     let $blogForm = $(`
       <div class="joinContainer">
         <form>
-          <input id="title" type="text" name="first-name" placeholder="First name">
+          <input id="title" type="text" name="title" placeholder="title">
           <textarea id="body" name="body" placeholder="we (B)log together..."></textarea>
           <input id="submitBtn" type="submit" name="submit" value="submit">
         </form>

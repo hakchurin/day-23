@@ -7,16 +7,18 @@ let $login = $(`
     <div class="login-modal">
       <h2>we (B)log together...</h2>
       <input id="login-input" type="text" name="username" placeholder="username..." />
-      <input type="button" name="sign-up" value="button" />
       <input type="submit" name="submit" value="submit" />
+      <input type="button" name="sign-up" value="sign up" />
     </div>
   </div>
   `);
 
   $login.find('input[type="button"]').on('click', function(evt){
+    $('.joinContainer').empty();
+    // evt.preventDefault();
     let $joinForm = $(`
       <div class="joinContainer">
-        <form>
+        <form class="joinForm">
           <input id="first" type="text" name="first-name" placeholder="First name">
           <input id="last" type="text" name="last-name" placeholder="Last name">
           <input id="address" type="text" name="address" placeholder="Address">
@@ -25,7 +27,7 @@ let $login = $(`
         </form>
       </div>
     `);
-
+    $('.joinForm').toggleClass('show-form');
     $login.find('.login-modal').append($joinForm);
   });
 
